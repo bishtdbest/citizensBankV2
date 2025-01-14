@@ -1,0 +1,414 @@
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  color: #292929;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #017d51;
+  font-weight: normal;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 26px;
+  position: relative;
+  padding-bottom: 14px;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+h2::after {
+  content: "";
+  position: absolute;
+  width: 73px;
+  height: 2px;
+  background-color: #017d51;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+  color: #759b24;
+}
+
+.btnLink {
+  display: inline-block;
+  background-color: #e97300;
+  font-size: 21px;
+  color: white;
+  padding: 4px 20px;
+}
+.btnLink:hover {
+  background-color: #000000;
+}
+
+.textLink {
+  position: relative;
+  color: #759b24;
+  display: inline-block;
+  margin-right: 10px;
+}
+.textLink::after {
+  content: "";
+  border: solid 1px #759b24;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.textLink:hover {
+  text-decoration: underline;
+}
+
+.container {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.header {
+  padding: 24px 0 17px;
+  text-align: center;
+}
+.header .logo {
+  display: inline-block;
+  max-width: 174px;
+}
+
+.middleContainer {
+  padding-bottom: 34px;
+}
+
+.bannerWrapper {
+  margin-bottom: 37px;
+}
+.bannerWrapper .banner {
+  position: relative;
+  overflow: hidden;
+}
+.bannerWrapper .bannerImg {
+  width: 100%;
+  display: block;
+  min-height: 201px;
+  object-fit: cover;
+  object-position: left;
+}
+.bannerWrapper .bannerOverlay {
+  position: absolute;
+  z-index: 1;
+  left: 53%;
+  top: 0;
+  transform: skew(-14deg);
+  height: 100%;
+  width: 55%;
+  background: #005944;
+  opacity: 80%;
+  display: none;
+}
+
+.investmentWrapper {
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 27px;
+}
+.investmentWrapper p {
+  text-align: left;
+  margin-bottom: 41px;
+  line-height: 1.95;
+}
+
+.advantageWrapper {
+  padding-top: 20px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+.advantageWrapper h2 {
+  text-align: center;
+}
+
+.advantageRow {
+  display: block;
+  padding-top: 13px;
+  position: relative;
+  margin-bottom: 0;
+}
+.advantageRow::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  background: #c0c0c0;
+  left: 50%;
+  top: 27px;
+  display: none;
+}
+.advantageRow:last-child {
+  padding-top: 0;
+  margin-bottom: 40px;
+}
+
+.advantageItem {
+  width: 100%;
+  margin-bottom: 16px;
+  padding-bottom: 22px;
+  border-bottom: solid 1px #c2c2c2;
+}
+.advantageItem:first-child {
+  padding-right: 0;
+}
+.advantageItem:last-child {
+  padding-left: 0;
+  padding-bottom: 18px;
+}
+.advantageItem p {
+  margin-bottom: 0;
+  font-size: 15.5px;
+  line-height: 2;
+}
+
+.loanWrapper {
+  margin-bottom: 30px;
+}
+.loanWrapper .loanHeading {
+  background-color: #017d51;
+}
+.loanWrapper .loanHeading h2 {
+  color: white;
+  padding: 16px 0 10px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.loanWrapper .loanHeading h2::after {
+  display: none;
+}
+.loanWrapper .loanContent {
+  padding: 15px 7px 8px;
+  background-color: #ebf7f5;
+  text-align: left;
+}
+.loanWrapper .loanContent p {
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+
+.testimonialList {
+  display: block;
+}
+.testimonialList .testimonialItem {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.testimonialList .testimonialItem .clientImg {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.testimonialList .testimonialItem .testimonial {
+  max-width: 60%;
+  display: block;
+  margin: 0 auto;
+  background: url(../images/quoteIcon.webp) no-repeat;
+}
+.testimonialList .testimonialItem q {
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 12px;
+  display: block;
+}
+.testimonialList .testimonialItem .clientDetails span {
+  color: #017d51;
+  display: block;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.footer {
+  border-top: solid 1px #017d51;
+  padding: 26px 0;
+}
+.footer .SocialLinkslist {
+  display: flex;
+  margin-bottom: 24px;
+}
+.footer .SocialLinkslist > a {
+  margin-right: 8px;
+}
+.footer p {
+  font-size: 11px;
+  line-height: 1.2;
+  color: #292929;
+}
+.footer p a {
+  text-decoration: underline;
+  color: #292929;
+}
+.footer p a:hover {
+  text-decoration: none;
+}
+.footer .footerLinks {
+  color: #000000;
+  font-size: 11px;
+  font-weight: normal;
+}
+.footer .footerLinks a {
+  color: #000000;
+}
+.footer .footerLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .container {
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+  h2 {
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .middleContainer {
+    padding-bottom: 131px;
+  }
+  .header {
+    padding: 64px 0 46px;
+    text-align: left;
+  }
+  .header .logo {
+    max-width: 100%;
+  }
+  .bannerWrapper .bannerOverlay {
+    display: block;
+  }
+  .investmentWrapper {
+    padding-top: 20px;
+    margin-bottom: 18px;
+  }
+  .investmentWrapper p {
+    line-height: 2;
+    margin-bottom: 37px;
+  }
+  .advantageWrapper {
+    margin-bottom: 16px;
+  }
+  .advantageRow {
+    padding-top: 20px;
+    display: flex;
+    margin-bottom: 85px;
+  }
+  .advantageRow::after {
+    display: block;
+  }
+  .advantageRow:last-child {
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  .advantageItem {
+    width: 50%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0 none;
+  }
+  .advantageItem:first-child {
+    padding-right: 36px;
+  }
+  .advantageItem:last-child {
+    padding-left: 42px;
+    padding-bottom: 0;
+  }
+  .advantageItem p {
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .loanWrapper {
+    margin-bottom: 61px;
+  }
+  .loanWrapper .loanHeading h2 {
+    line-height: 1.2;
+  }
+  .loanWrapper .loanContent {
+    padding: 25px 64px 10px;
+  }
+  .loanWrapper .loanContent p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+  .testimonialWrapper .testimonialList {
+    display: flex;
+  }
+  .testimonialWrapper .testimonialList .testimonialItem {
+    width: 27%;
+    margin-bottom: 0px;
+  }
+  .testimonialWrapper .testimonialList .testimonialItem.centerItem {
+    width: 46%;
+  }
+  .footer {
+    padding: 37px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 1199.8px) {
+  .testimonialWrapper .testimonialList .testimonialItem {
+    width: 30%;
+  }
+  .testimonialWrapper .testimonialList .testimonialItem.centerItem {
+    width: 40%;
+  }
+  .testimonialWrapper .testimonialList .testimonialItem .testimonial {
+    max-width: 80%;
+  }
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
